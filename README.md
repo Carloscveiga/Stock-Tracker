@@ -24,3 +24,5 @@ Open the local server adress.
 ![Local Adress](/img/local_adress.png)
 
 Pick a stock from table.
+
+You can pick, change/replace stocks by going into [Tikets](.venv/equity_list.py) and adding as needed with the tickers from [yahoo](https://finance.yahoo.com/?guccounter=1)
