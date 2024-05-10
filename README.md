@@ -17,7 +17,7 @@ ex:
     pip install dash
 
 Run file:
-    dash_app.py
+    [Dash App](.venv/dash_app.py) 
 
 Open the local server adress.
 
@@ -25,4 +25,4 @@ Open the local server adress.
 
 Pick a stock from table.
 
-You can pick, change/replace stocks by going into [Tikets](.venv/equity_list.py) and adding as needed with the tickers from [yahoo](https://finance.yahoo.com/?guccounter=1)
+You can pick, change/replace stocks by going into [Tikets](.venv/equity_list.py) and adding as needed with the tickets from [yahoo](https://finance.yahoo.com/?guccounter=1)
