@@ -21,8 +21,6 @@ Run file:
 
 Open the local server adress.
 
-local_adress.png
-
 ![Local Adress](/img/local_adress.png)
 
 Pick a stock from table.
