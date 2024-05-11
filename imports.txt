@@ -1,7 +1,0 @@
-pip install polars
-pip install numpy
-pip install yfinance
-pip install dash
-pip install dash-bootstrap-components
-pip install dash-ag-grid
-pip install scipy

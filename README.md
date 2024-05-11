@@ -11,7 +11,15 @@
 
 *Instructions
 
-Download or clone the Stock app folder.
+Download or clone the Stock app.
+
+Create a new work environment.
+    
+    - python -m venv .venv
+
+    - .venv\Scripts\activate    
+
+
 
 Install dependencies.
 
