@@ -26,4 +26,4 @@ Open the local server adress.
 
 Pick a stock from table.
 
-You can pick, change/replace stocks by going into [Tikets](.venv/equity_list.py) and adding as needed with the tickets from [yahoo](https://finance.yahoo.com/?guccounter=1)
+You can pick, change/replace stocks by going into [Tickets](.venv/equity_list.py) and adding as needed with the tickets from [yahoo](https://finance.yahoo.com/?guccounter=1)
