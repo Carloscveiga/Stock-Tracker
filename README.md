@@ -9,9 +9,6 @@
 ![Main App](/img/Main_page2.png)
 
 
-
-
-
 *Instructions
 
 Install dependencies
