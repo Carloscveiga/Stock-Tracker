@@ -36,7 +36,7 @@ Install dependencies.
 Run file:
     [Dash App](.venv/dash_app.py) 
         
-        - python dash_app.py
+     python dash_app.py
 
 Open the local server adress.
 
