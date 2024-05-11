@@ -11,15 +11,17 @@
 
 *Instructions
 
-Install dependencies
+Download or clone the Stock app folder.
 
-open file:
- imports.txt
+Install dependencies.
 
-open terminal and install dependencies
+    open file:
+    imports.txt
 
-ex:
-    pip install dash
+    open terminal and install dependencies
+
+    ex:
+        pip install dash
 
 Run file:
     [Dash App](.venv/dash_app.py) 
