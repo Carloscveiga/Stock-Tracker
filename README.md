@@ -23,16 +23,16 @@ Create a new work environment.
 
 Install dependencies.
 
-    open file:
-    imports.txt
-
     open terminal and install dependencies
 
-    ex:
-        pip install dash
+    pip install -r requirements.txt
+
+
 
 Run file:
     [Dash App](.venv/dash_app.py) 
+        
+        - python dash_app.py
 
 Open the local server adress.
 
