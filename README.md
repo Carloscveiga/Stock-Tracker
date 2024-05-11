@@ -44,4 +44,4 @@ Open the local server adress.
 
 Pick a stock from table.
 
-You can pick, change/replace stocks by going into [Tickets](stock app/equity_list.py") (equity_list.py file) and adding as needed with the tickets from [yahoo](https://finance.yahoo.com/?guccounter=1)
+You can pick, change/replace stocks by going into [Tickets](stock app/equity_list.py) (equity_list.py file) and adding as needed with the tickets from [yahoo](https://finance.yahoo.com/?guccounter=1)
