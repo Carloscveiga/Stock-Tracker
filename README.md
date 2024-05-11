@@ -13,19 +13,19 @@
 
 Download or clone the Stock app.
 
-Create a new work environment.
+Create a new work environment. Open terminal and run:
     
-    - python -m venv .venv
+     python -m venv .venv
 
-    - .venv\Scripts\activate    
+     .venv\Scripts\activate    
 
 
 
 Install dependencies.
 
-    open terminal and install dependencies
+    Open terminal and run:
 
-    pip install -r requirements.txt
+     pip install -r requirements.txt
 
 
 
