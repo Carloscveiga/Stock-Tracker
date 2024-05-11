@@ -11,7 +11,11 @@
 
 *Instructions
 
+
 Download or clone the Stock app.
+
+![Download zip](/img/zip.png)
+
 
 Create a new work environment. Open terminal and run:
     
