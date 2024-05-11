@@ -3,6 +3,7 @@
 ## DashBoard v1.0: A web-based application for your daily trade.
 
 ![Main App](/img/Main_page.png)
+![Main App](/img/Main_page2.png)
 
 *Instructions
 
