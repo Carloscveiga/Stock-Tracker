@@ -15,7 +15,7 @@ import polars as pl
 
 
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], serve_locally=False)
     
 stock_data = get_stock_data(equities)
 price_data = stock_data.tail(1200)
@@ -25,8 +25,12 @@ sma_signal_data = calc_sma_signal_data(sma_data)
 lin_and_poly_data_multi = calc_lin_and_poly_data_multi(closed_price_data, 1318, len(closed_price_data))
 lin_and_poly_signal_data = calc_lin_and_poly_signal_data_multi(lin_and_poly_data_multi, 0.83)
 
+print(lin_and_poly_signal_data.columns)
+
 def last_close(ticker):
-    return stock_data[ticker]["Close"].iloc[-1]
+    close_data = stock_data[(ticker, 'Close')].dropna() 
+    value = close_data.iloc[-1]
+    return value
 
 data = {
     "ticker": [ticker for ticker in equities],
@@ -36,6 +40,8 @@ data = {
     "last linear position": [lin_and_poly_signal_data[f"{ticker}_Lin_Signal"][-1] for ticker in equities],
     "last polynomial position": [lin_and_poly_signal_data[f"{ticker}_Poly_Signal"][-1] for ticker in equities],
 }
+
+
 df = pd.DataFrame(data)
 df['last MA position'] = df['last MA position'].map({1: 'BUY', -1: 'SELL', 0: 'HOLD'}).fillna('Unknown')
 df['last linear position'] = df['last linear position'].map({1: 'BUY', -1: 'SELL', 0: 'HOLD'}).fillna('Unknown')
