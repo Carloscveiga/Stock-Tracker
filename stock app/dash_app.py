@@ -25,7 +25,6 @@ sma_signal_data = calc_sma_signal_data(sma_data)
 lin_and_poly_data_multi = calc_lin_and_poly_data_multi(closed_price_data, 1318, len(closed_price_data))
 lin_and_poly_signal_data = calc_lin_and_poly_signal_data_multi(lin_and_poly_data_multi, 0.83)
 
-print(lin_and_poly_signal_data.columns)
 
 def last_close(ticker):
     close_data = stock_data[(ticker, 'Close')].dropna() 
@@ -393,4 +392,4 @@ def update_multi_poly_chart(selected_row):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run(host="0.0.0.0", port=80)
