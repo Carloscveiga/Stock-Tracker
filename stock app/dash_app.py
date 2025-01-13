@@ -393,4 +393,4 @@ def update_multi_poly_chart(selected_row):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=False, use_reloader=False)
+    app.run_server(debug=False)
