@@ -449,7 +449,6 @@ equities = {
     'TFC': 'Truist',
     'TYL': 'Tyler Technologies',
     'TSN': 'Tyson Foods',
-    'USB': 'U.S. Bank',
     'UDR': 'UDR, Inc.',
     'ULTA': 'Ulta Beauty',
     'UNP': 'Union Pacific Corporation',

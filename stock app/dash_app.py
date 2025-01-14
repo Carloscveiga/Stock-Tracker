@@ -15,7 +15,10 @@ import polars as pl
 
 
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], serve_locally=False)
+app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+
+server = app.server
+
     
 stock_data = get_stock_data(equities)
 price_data = stock_data.tail(1200)
@@ -392,4 +395,4 @@ def update_multi_poly_chart(selected_row):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run(debug=True)
