@@ -141,9 +141,12 @@ header = html.Div(
 app.layout = dbc.Container(
     [
         header,
-        dbc.Row([dbc.Col(candlestick),dbc.Col(mas)]),
-        dbc.Row([dbc.Col(lin),dbc.Col(poly)]),
         dbc.Row(dbc.Col(grid, className="py-4")),
+        dbc.Row(dbc.Col(candlestick, className="py-4")),
+        dbc.Row(dbc.Col(mas, className="py-4")),
+        dbc.Row(dbc.Col(lin, className="py-4")),
+        dbc.Row(dbc.Col(poly, className="py-4")),
+        
     ],
 )
 
