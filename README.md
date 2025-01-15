@@ -29,17 +29,14 @@ Create a new work environment. In the terminal run:
 
 
 
-Install dependencies.
-
-    In the terminal run:
+Install dependencies. In the terminal run:
 
      pip install -r requirements.txt
 
 
 
-Run file:
-    [App](/stock%20app/app.py) 
-        
+Run file: [App](/stock%20app/app.py) 
+    
      python app.py
 
 Open the local server adress.
