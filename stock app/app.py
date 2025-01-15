@@ -1,4 +1,3 @@
-import dash
 from dash import Dash, html, dcc, callback, Output, Input, State
 import dash_bootstrap_components as dbc
 from equity_list import equities
@@ -13,13 +12,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import polars as pl
 
-
-
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
-
 server = app.server
 
-    
 stock_data = get_stock_data(equities)
 price_data = stock_data.tail(1200)
 closed_price_data = handle_stock_data_prices(stock_data, equities)
@@ -27,7 +22,6 @@ sma_data = calc_sma_data(closed_price_data, 0, len(closed_price_data))
 sma_signal_data = calc_sma_signal_data(sma_data)
 lin_and_poly_data_multi = calc_lin_and_poly_data_multi(closed_price_data, 1318, len(closed_price_data))
 lin_and_poly_signal_data = calc_lin_and_poly_signal_data_multi(lin_and_poly_data_multi, 0.83)
-
 
 def last_close(ticker):
     close_data = stock_data[(ticker, 'Close')].dropna() 
@@ -42,7 +36,6 @@ data = {
     "last linear position": [lin_and_poly_signal_data[f"{ticker}_Lin_Signal"][-1] for ticker in equities],
     "last polynomial position": [lin_and_poly_signal_data[f"{ticker}_Poly_Signal"][-1] for ticker in equities],
 }
-
 
 df = pd.DataFrame(data)
 df['last MA position'] = df['last MA position'].map({1: 'BUY', -1: 'SELL', 0: 'HOLD'}).fillna('Unknown')
@@ -160,7 +153,7 @@ app.layout = dbc.Container(
     Input("portfolio-grid", "selectedRows"),
 )
 def update_candlestick(selected_row):
-    if selected_row is None:
+    if not selected_row:
         ticker = "AAPL"
         company = "Apple Inc."
     else:
@@ -184,12 +177,12 @@ def update_candlestick(selected_row):
     )
     return fig
 
-@dash.callback(
+@app.callback(
     Output("mas", "figure"),
     Input("portfolio-grid", "selectedRows"),
 )
 def update_mas(selected_row):
-    if selected_row is None:
+    if not selected_row:
         ticker = "AAPL"
         company = "Apple Inc."
     else:
@@ -275,7 +268,7 @@ def update_mas(selected_row):
     Input("portfolio-grid", "selectedRows"),
 )
 def update_multi_lin_chart(selected_row):
-    if selected_row is None:
+    if not selected_row:
         ticker = "AAPL"
         company = "Apple Inc."
     else:
@@ -337,7 +330,7 @@ def update_multi_lin_chart(selected_row):
     Input("portfolio-grid", "selectedRows"),
 )
 def update_multi_poly_chart(selected_row):
-    if selected_row is None:
+    if not selected_row:
         ticker = "AAPL"
         company = "Apple Inc."
     else:
