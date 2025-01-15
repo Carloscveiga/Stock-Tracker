@@ -34,7 +34,7 @@ Install dependencies.
 
 
 Run file:
-    [Dash App](/stock%20app/app.py) 
+    [App](/stock%20app/app.py) 
         
      python app.py
 
