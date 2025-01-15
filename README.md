@@ -34,9 +34,9 @@ Install dependencies.
 
 
 Run file:
-    [Dash App](/stock%20app/dash_app.py) 
+    [Dash App](/stock%20app/app.py) 
         
-     python dash_app.py
+     python app.py
 
 Open the local server adress.
 
