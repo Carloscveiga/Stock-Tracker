@@ -16,8 +16,12 @@ Download or clone the Stock app.
 
 ![Download zip](/img/zip.png)
 
+Open the folder with your IDE and change directory(cd) to the stock app folder. Open terminal and run:
+    
+     cd '.\stock app\'
 
-Create a new work environment. Open terminal and run:
+
+Create a new work environment. In the terminal run:
     
      python -m venv .venv
 
@@ -27,7 +31,7 @@ Create a new work environment. Open terminal and run:
 
 Install dependencies.
 
-    Open terminal and run:
+    In the terminal run:
 
      pip install -r requirements.txt
 
